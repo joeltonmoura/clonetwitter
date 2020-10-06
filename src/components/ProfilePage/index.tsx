@@ -1,14 +1,16 @@
 import React from 'react'
 
+
+
 import {
    Container
   , Banner
   , Avatar
   , ProfileData
-  , EditButton
   , LocationIcon
   , CakeIcon
   , Followage
+  , EditButton
 } from './styles'
 
 const ProfilePage: React.FC = () =>{
@@ -19,7 +21,7 @@ const ProfilePage: React.FC = () =>{
       </Banner>
 
       <ProfileData>
-        {/* <EditButton outlined> Editar perfil</EditButton> */}
+        <EditButton outlined>Editar Perfil</EditButton>
 
         <h1>Joelton Moura</h1>
         <h2>@joleton_moura</h2>
