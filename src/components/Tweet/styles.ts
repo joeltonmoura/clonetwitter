@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import { Chat, Favorite, Rocketseat  } from '../../styles/Icons'
 
@@ -118,8 +118,62 @@ export const  Icons = styled.div`
   @media (min-width: 330px) {
     width: 63%;
   }
+
+  > div {
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.7;
+    }
+  }
 `
-export const  Status = styled.div``
-export const  CommentIcon = styled.div``
-export const  RetweetIcon = styled.div``
-export const  LikeIcon = styled.div``
+
+export const  Status = styled.div`
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  color: var(--gray);
+  
+  > svg {
+    margin-right: 5px;
+  }
+
+  &:nth-child(1){
+    &, >svg path {
+      color: var(--gray)
+    }
+  }
+
+  &:nth-child(2){
+    color: var(--retweet);
+
+    &, >svg path {
+      color: var(--retweet);
+    }
+  }
+
+  &:nth-child(3){
+    color: var(--like);
+
+    &, >svg path {
+      color: var(--like);
+    }
+  }
+`
+
+const iconCSS = css`
+  width: 19px;
+  height: 19px;
+`
+
+export const  CommentIcon = styled(Chat)`
+  ${iconCSS}
+`
+export const  RetweetIcon = styled(Rocketseat)`
+  ${iconCSS}
+
+`
+export const  LikeIcon = styled(Favorite)`
+  ${iconCSS}
+`
