@@ -31,7 +31,4 @@ export const Tweets = styled.div`
   flex-direction: column;
 
   flex-shrink: 0;
-  
 `
-
-export const Tweet = styled.div``
